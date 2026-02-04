@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    color: black;
+}
+
+.container{
+    max-width:1200px;
+    margin: auto 100px;
+    padding: 20px;
+}
+
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:24px;
+    grid-template-areas: "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+   
+}
+
+.card{
+    padding: 24px;
+    border-radius: 6px;
+    
+}
+
+
+.jona-card,.jean-card{
+    min-height: 280px;
+}
+
+.daniel-card{
+    grid-area: daniel;
+    background:linear-gradient(135deg,#7c4dff 0%,#6a3de8 100%);
+}
+
+.jona-card{
+    grid-area:jonathan;
+    background: #48556a;
+}
+
+.kira-card{
+    grid-area:kira;
+    background: white;
+}
+
+.jean-card{
+    grid-area:jeanette;
+    background: white;
+}
+
+.pat-card{
+    grid-area: patrick;
+    background: #19202d;
+}
+
+.avatars img{
+    display: flex;
+    border-radius: 50%;
+}
+.profile-info{
+    margin-bottom:12px;
+    color: white;
+}
+.profile-info h3{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.profile-info p{
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.kira-card .profile-info,.jean-card .profile-info{
+    color: #19202d;
+}
+
+.quote{
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 14px;
+    color: white;
+}
+
+.kira-card .quote, .jean-card .quote{
+    color: #000;
+}
+
+.details{
+    opacity: 0.7;
+    color: white;
+    line-height: 1.7;
+    font-size: 12px;
+}
+
+.kira-card .details, .jean-card .details{
+    color: #000;
+}
+
+
+
+@media (max-width:1024px) {
+    .testimonial-grid{
+        grid-template-columns:1fr;
+        grid-template-areas:"daniel"
+                            "jonathan"
+                            "kira"
+                            "jeanette"
+                            "patrick";
+    .daniel-card,.pat-card,.kira-card{
+    min-height: 450px;
+}                      
+    }
+}
